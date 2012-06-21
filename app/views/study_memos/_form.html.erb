@@ -1,0 +1,29 @@
+<%= form_for(@study_memo) do |f| %>
+  <% if @study_memo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@study_memo.errors.count, "error") %> prohibited this study_memo from being saved:</h2>
+
+      <ul>
+      <% @study_memo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :book_id %><br />
+    <%= f.number_field :book_id %>
+  </div>
+  <div class="field">
+    <%= f.label :study_state %><br />
+    <%= f.text_field :study_state %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br />
+    <%= f.text_area :note %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

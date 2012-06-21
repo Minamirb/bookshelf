@@ -1,0 +1,27 @@
+<h1>Listing study_memos</h1>
+
+<table>
+  <tr>
+    <th>Book</th>
+    <th>Study state</th>
+    <th>Note</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @study_memos.each do |study_memo| %>
+  <tr>
+    <td><%= study_memo.book_id %></td>
+    <td><%= study_memo.study_state %></td>
+    <td><%= study_memo.note %></td>
+    <td><%= link_to 'Show', study_memo %></td>
+    <td><%= link_to 'Edit', edit_study_memo_path(study_memo) %></td>
+    <td><%= link_to 'Destroy', study_memo, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Study memo', new_study_memo_path %>
