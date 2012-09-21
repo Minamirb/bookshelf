@@ -1,4 +1,14 @@
 Booklist::Application.routes.draw do
+  resources :books_categories
+
+  resources :categories
+
+  resources :publishers
+
+  resources :studies
+
+  resources :books
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

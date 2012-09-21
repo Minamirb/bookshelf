@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  author: MyString
+  version: 1
+  published_on: 2012-09-22
+  isbn: MyString
+  image_url: MyString
+  amazon_url: MyString
+  publisher: 
+
+two:
+  title: MyString
+  author: MyString
+  version: 1
+  published_on: 2012-09-22
+  isbn: MyString
+  image_url: MyString
+  amazon_url: MyString
+  publisher: 
