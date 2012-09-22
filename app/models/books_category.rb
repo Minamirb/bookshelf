@@ -1,5 +1,5 @@
 class BooksCategory < ActiveRecord::Base
   belongs_to :book
   belongs_to :category
-  # attr_accessible :title, :body
+  attr_accessible :book_id, :category_id
 end
