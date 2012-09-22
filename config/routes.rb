@@ -1,9 +1,11 @@
 Booklist::Application.routes.draw do
+  resources :books_categories
+
+  resources :categories
+
   resources :publishers
 
-  resources :fields
-
-  resources :study_memos
+  resources :studies
 
   resources :books
 

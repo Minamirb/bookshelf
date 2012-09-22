@@ -3,23 +3,19 @@
 one:
   title: MyString
   author: MyString
-  field_id: 1
-  publisher_id: 1
-  published_date: 2012-05-19
-  edition: 1
-  amazon_url: 1
-  bookimg: 1
-  note: MyText
-  ISBN: 1
+  version: 1
+  published_on: 2012-09-22
+  isbn: MyString
+  image_url: MyString
+  amazon_url: MyString
+  publisher:
 
 two:
   title: MyString
   author: MyString
-  field_id: 1
-  publisher_id: 1
-  published_date: 2012-05-19
-  edition: 1
-  amazon_url: 1
-  bookimg: 1
-  note: MyText
-  ISBN: 1
+  version: 1
+  published_on: 2012-09-22
+  isbn: MyString
+  image_url: MyString
+  amazon_url: MyString
+  publisher:

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Status:</b>
+  <%= @study.status %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @study.comment %>
+</p>
+
+<p>
+  <b>Book:</b>
+  <%= @study.book %>
+</p>
+
+
+<%= link_to 'Edit', edit_study_path(@study) %> |
+<%= link_to 'Back', studies_path %>

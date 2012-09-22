@@ -11,24 +11,34 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120519072928) do
+ActiveRecord::Schema.define(:version => 20120921232442) do
 
   create_table "books", :force => true do |t|
     t.string   "title"
     t.string   "author"
-    t.integer  "field_id"
+    t.integer  "version"
+    t.date     "published_on"
+    t.string   "isbn"
+    t.string   "image_url"
+    t.string   "amazon_url"
     t.integer  "publisher_id"
-    t.date     "published_date"
-    t.integer  "edition"
-    t.integer  "amazon_url"
-    t.integer  "bookimg"
-    t.text     "note"
-    t.integer  "ISBN"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
-  create_table "fields", :force => true do |t|
+  add_index "books", ["publisher_id"], :name => "index_books_on_publisher_id"
+
+  create_table "books_categories", :force => true do |t|
+    t.integer  "book_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "books_categories", ["book_id"], :name => "index_books_categories_on_book_id"
+  add_index "books_categories", ["category_id"], :name => "index_books_categories_on_category_id"
+
+  create_table "categories", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -40,12 +50,14 @@ ActiveRecord::Schema.define(:version => 20120519072928) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "study_memos", :force => true do |t|
+  create_table "studies", :force => true do |t|
+    t.string   "status"
+    t.text     "comment"
     t.integer  "book_id"
-    t.string   "study_state"
-    t.text     "note"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
+
+  add_index "studies", ["book_id"], :name => "index_studies_on_book_id"
 
 end

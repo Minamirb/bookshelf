@@ -20,36 +20,24 @@
     <%= f.text_field :author %>
   </div>
   <div class="field">
-    <%= f.label :field_id %><br />
-    <%= f.number_field :field_id %>
+    <%= f.label :version %><br />
+    <%= f.number_field :version %>
   </div>
   <div class="field">
-    <%= f.label :publisher_id %><br />
-    <%= f.number_field :publisher_id %>
+    <%= f.label :published_on %><br />
+    <%= f.date_select :published_on %>
   </div>
   <div class="field">
-    <%= f.label :published_date %><br />
-    <%= f.date_select :published_date %>
+    <%= f.label :isbn %><br />
+    <%= f.text_field :isbn %>
   </div>
   <div class="field">
-    <%= f.label :edition %><br />
-    <%= f.number_field :edition %>
+    <%= f.label :image_url %><br />
+    <%= f.text_field :image_url %>
   </div>
   <div class="field">
     <%= f.label :amazon_url %><br />
-    <%= f.number_field :amazon_url %>
-  </div>
-  <div class="field">
-    <%= f.label :bookimg %><br />
-    <%= f.number_field :bookimg %>
-  </div>
-  <div class="field">
-    <%= f.label :note %><br />
-    <%= f.text_area :note %>
-  </div>
-  <div class="field">
-    <%= f.label :ISBN %><br />
-    <%= f.number_field :ISBN %>
+    <%= f.text_field :amazon_url %>
   </div>
   <div class="actions">
     <%= f.submit %>
